@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/signin-background.jpg);
+}
+
+.box {
+    /* border: 1px solid #00ee00; */
+    height: 700px;
+    position: relative;
+}
+
+.box .close_btn {
+    width: 100px;
+    height: 50px;
+    /* background-color: red; */
+    float: right;
+}
+
+.box .close_btn a i{
+    text-decoration: none;
+}
+
+.box .box1 {
+    width: 500px;
+    height: 600px;
+    border: 1px ridge rgb(110, 105, 105);
+    /* background-color: rgb(113, 111, 111); */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.5), 0px 0px 15px rgba(75, 75, 75, 0.3);
+    background-color: rgba(255, 255, 255, 0.27);
+}
+
+.box .box1 h1 {
+    /* background-color: yellowgreen; */
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 150px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.box .box1 .slogan {
+    /* background-color: yellowgreen; */
+    width: 400px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.box .box1 .container {
+    /* background-color: yellowgreen; */
+    width: 400px;
+    height: 160px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.box .box1 .container input[type=text] {
+    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+    padding-left: 30px;
+    margin-left: 63px;
+    font-size: 17px;
+    border: 1 solid gray;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.box .box1 .check_point {
+    /* background-color: yellowgreen; */
+    width: 270px;
+    height: 30px;
+    margin-left: 120px;
+}
+
+.box .box1 .check_point input{
+    display: block;
+    margin-top: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+.box .box1 .check_point label{
+    font-size: 9px;
+    display: block;
+    float: left;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+.box .box1 .check_point a {
+    text-decoration: none;
+    display: block;
+    float: right;
+    color: #04aa6d;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.box .box1 button {
+    /* background-color: yellowgreen; */
+    width: 270px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 120px;
+    font-size: 17px;
+    background: #04aa6d;
+    border: none;
+    cursor: pointer;
+    border-radius: 150px;
+}
+
+.box .box1 button:hover {
+    background: #048d5b
+}
+
+.box .box1 .last {
+    width: 250px;
+    height: 50px;
+    /* background-color: gray; */
+    margin-top: 30px;
+    margin-left: 130px;
+}
+
+.box .box1 .last div {
+    float: left;
+    font-size: 15px;
+    line-height: 50px;
+    margin-left: 10px;
+}
+
+.box .box1 .last a {
+    color: #04aa6d;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .box .box1 {
+        width: 80%;
+        max-width: 600px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .box .box1 {
+        width: 70%;
+        max-width: 800px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .box .box1 {
+        width: 50%;
+        max-width: 1000px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .box .box1 {
+        width: 40%;
+        max-width: 1200px;
+    }
+}

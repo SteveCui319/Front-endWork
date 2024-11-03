@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>homepage</title>
+</head>
+<body>
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay title -->
+        <div class="title">Tutorials</div>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <div class="first-col">
+                <h3>Java Tutorials</h3>
+                <a href="java.html" style="cursor: pointer;"><div>Java Home</div></a>
+                <a href="synatx.html" style="cursor: pointer;"><div>Java Synatx</div></a>
+                <a href="#"><div>Java Ouput</div></a>
+                <a href="#"><div>Java Comments</div></a>
+                <a href="#"><div>Java Variables</div></a>
+                <a href="#"><div>Java Data Types</div></a>
+                <a href="#"><div>Java Type Casting</div></a>
+                <a href="#"><div>Java Operators</div></a>
+                <a href="#"><div>Java Strings</div></a>
+                <a href="#"><div>Java Math</div></a>
+              </div>
+    
+              <div class="sec-col">
+                <h3>Java Methods</h3>
+                <a href="#"><div>Java Methods</div></a>
+                <a href="#"><div>Java Method Parameter</div></a>
+                <a href="#"><div>Java Method Overloading</div></a>
+                <a href="#"><div>Java Scope</div></a>
+                <a href="#"><div>Java Recursion</div></a>
+                <!-- <a href="#"><div>Java Method </div></a>
+                <a href="#"><div>Java Method </div></a> -->
+
+                <h3 class="subtitle">Java File Handling</h3>
+                <a href="#"><div>Java Files</div></a>
+                <a href="#"><div>Java Create/Write Files</div></a>
+                <a href="#"><div>Java Read Files</div></a>
+                <a href="#"><div>Java Delete Files</div></a>
+                <!-- <a href="#"><div>Java </div></a>
+                <a href="#"><div>Java </div></a>
+                <a href="#"><div>Java </div></a>
+                <a href="#"><div>Java </div></a>
+                <a href="#"><div>Java </div></a>
+                <a href="#"><div>Java </div></a> -->
+              </div>
+    
+              <div class="third-col">
+                <h3>Java Classes</h3>
+                <a href="#"><div>Java Classes/Objects</div></a>
+                <a href="#"><div>Java Class Attributes</div></a>
+                <a href="#"><div>Java Class Methods</div></a>
+                <a href="#"><div>Java Constructors</div></a>
+                <a href="#"><div>Java Modifiers</div></a>
+                <a href="#"><div>Java Encapsulation</div></a>
+                <a href="#"><div>Java Packages/API</div></a>
+                <a href="#"><div>Java Inheritance</div></a>
+                <a href="#"><div>Java Polymorphism</div></a>
+                <a href="#"><div>Java Inner Classes</div></a>
+              </div>
+    
+              <div class="fourth-col">
+                <h3>Java How To</h3>
+                <a href="#"><div>Add Two Number</div></a>
+                <a href="#"><div>Count Words</div></a>
+                <a href="#"><div>Reverse a String</div></a>
+                <!-- <a href="#"><div></div></a>
+                <a href="#"><div></div></a>
+                <a href="#"><div></div></a>
+                <a href="#"><div></div></a>
+                <a href="#"><div></div></a>
+                <a href="#"><div></div></a> -->
+
+
+              </div>
+        </div>
+    </div>
+
+    <div class="navibar">
+        <ul>
+            <!-- Use tutorials element to open/show the overlay navigation menu -->
+            <li class="tutorials" onclick="openNav()">Tutorials<i class="fa fa-caret-right fa-1x" aria-hidden="true"></i></li>
+            <a href="resources.html"><li class="resources">Resources</li></a>
+            <a href="register.html"><li class="sign-up">Sign Up</li></a>
+            <a href="signin.html"><li class="last">Log in</li></a>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="main-body">
+            <div class="logo"><img src="../img/cs-logo.jpg" alt="cs-logo"></div>
+            <div class="title">Learn to Code</div>
+            <div class="subtitle">With the world's largest Java studying site</div>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search our Java tutorials, e.g. Classes" name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+</body>
+</html>

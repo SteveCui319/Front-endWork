@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/register.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>register</title> 
+</head>
+<body>
+<div class="form-div">
+    <div class="reg-content">
+        <h1>Welcome to register</h1>
+        <span>I'm a member.</span><a href="../html/signin.html">Log in now</a>
+    </div>
+
+    <form id="reg-form" action="#" method="post">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td class="inputs">
+                    <input name="username" type="text" id="username">
+                    <br>
+                    <span id="username_err" class="err_msg" style="display: none">at least 3 letter</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td class="inputs">
+                    <input name="password" type="password" id="password">
+                    <br>
+                    <span id="password_err" class="err_msg" style="display: none">8~12 letter</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Phone No.</td>
+                <td class="inputs"><input name="tel" type="text" id="tel">
+                    <br>
+                    <span id="tel_err" class="err_msg" style="display: none">length is 11</span>
+                </td>
+            </tr>
+        </table>
+
+        <div class="buttons">
+            <input value="Sign Up" type="submit" id="reg_btn">
+        </div>
+        <br class="clear">
+    </form>
+</div>
+
+
+<script>
+    //username
+    var usernameInput = document.getElementById("username");
+    usernameInput.onblur = checkUsername;
+
+
+    function checkUsername() {
+        var username = usernameInput.value.trim();
+
+
+        // 判断用户名的长度在 6~12 之间，单词字符组成
+        var reg = /^\w{3,12}$/;
+        var flag = reg.test(username);
+
+
+        //var flag = username.length >= 3 && username.length <= 12;
+        if(flag){
+            // 符合规则
+            document.getElementById("username_err").style.display = 'none';
+        }else{
+            // 不符合规则
+            document.getElementById("username_err").style.display = '';
+        }
+
+
+        return flag;
+    }
+
+
+
+
+    //password
+    var passwordInput = document.getElementById("password");
+    passwordInput.onblur = checkPassword;
+
+
+    function checkPassword() {
+        var password = passwordInput.value.trim();
+
+
+        // 判断密码的长度在 8~12 之间
+        var reg = /^\w{8,12}$/;
+        var flag = reg.test(password);
+
+
+        //var flag = password.length >= 8 && password.length <= 12;
+        if(flag){
+            // 符合规则
+            document.getElementById("password_err").style.display = 'none';
+        }else{
+            // 不符合规则
+            document.getElementById("password_err").style.display = '';
+        }
+
+
+        return flag;
+    }
+
+
+
+
+    // phone number
+    var telInput = document.getElementById("tel");
+    telInput.onblur = checktel;
+
+
+    function checktel() {
+        var tel = telInput.value.trim()
+
+
+        // 判断电话号码的长度在 11, 数字组成， 开头是0
+        var reg = /^[0]\d{10}$/;
+        var flag = reg.test(tel);
+
+
+        //var flag = tel.length == 11;
+        if(flag){
+            // 符合规则
+            document.getElementById("tel_err").style.display = 'none';
+        }else{
+            // 不符合规则
+            document.getElementById("tel_err").style.display = '';
+        }
+
+
+        return flag;
+    }
+
+
+    var regForm = document.getElementById("reg-form");
+
+
+    regForm.onsubmit = function () {
+        var flag = checkUsername() && checkPassword() && checktel();
+
+
+        return flag;
+    }
+</script>
+</body>
+</html>
