@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    height: 90px;
+    overflow: hidden;
+    background-color: gray;
+    border-bottom: 10px red;
+}
+
+/* left part of the navigation bar */
+.navbar .left .logo img{
+    float: left;
+    width: 240px;
+    height: 70px;
+    margin: 10px 50px 10px 10px;
+    /* background-color: pink; */
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+.navbar .search-container {
+    float: right;
+    /* background-color: pink; */
+}
+
+/* style the search box inside the navigation bar */
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 25px;
+    font-size: 17px;
+    border: none;
+    width: 500px;
+    height: 40px;
+    border-radius: 15px 0 0 15px;
+    background: #ddd;
+}
+
+.navbar .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 25px;
+    margin-right: 16px;
+    font-size: 17px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    border-radius: 0 150px 150px 0;
+}
+
+.navbar .search-container button:hover {
+    background: #ccc;
+}
+
+/* title */
+.title {
+    height: 200px;
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    position: relative;
+}
+
+.title div {
+    width: 600px;
+    height: 100px;
+    /* background-color: red; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 40px;
+    color: #303840;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* box of content */
+.middle-container {
+    width: 900px;
+    height: 600px;
+    /* background-color: rgb(179, 175, 175); */
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.middle-container > div {
+    float: left;
+}
+
+/* address */
+.middle-container .address {
+    /* background-color: yellowgreen; */
+    width: 300px;
+    height: 600px;
+}
+
+.middle-container .address-icon-container {
+    background-color: rgb(42, 225, 225);
+    margin-top: 10px;
+    margin-left: 115px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+
+.middle-container .address-icon-container i {
+    display: inline-block;
+    margin-left: 19px;
+    margin-top: 8px;
+}
+
+.middle-container .address .context .address-1 {
+    color: #383838;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.middle-container .address .context .address-text {
+    color: #383838;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.middle-container .address .context .address-2 {
+    color: #383838;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* phone */
+.middle-container .phone {
+    /* background-color: skyblue; */
+    width: 300px;
+    height: 600px;
+}
+
+.middle-container .phone-icon-container {
+    background-color: rgb(42, 225, 225);
+    margin-top: 10px;
+    margin-left: 115px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+
+.middle-container .phone-icon-container i {
+    display: inline-block;
+    margin-left: 12px;
+    margin-top: 10px;
+}
+
+.middle-container .phone .context .phone-1 {
+    color: #383838;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.middle-container .phone .context .phone-2 {
+    color: #383838;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.middle-container .phone .context .phone-2-1 {
+    color: #383838;
+    font-weight: 700;
+    /* margin-top: 20px; */
+    font-size: 20px;
+}
+
+.middle-container .phone .context .phone-3 {
+    color: #383838;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.middle-container .phone .context .phone-no {
+    color: #383838;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+/* email */
+.middle-container .email {
+    /* background-color: green; */
+    width: 300px;
+    height: 600px;
+}
+
+.middle-container .email-icon-container {
+    background-color: rgb(42, 225, 225);
+    margin-top: 10px;
+    margin-left: 115px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+
+.middle-container .email-icon-container i {
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 12px;
+}
+
+/* content */
+.middle-container h3 {
+    display: inline-block;
+    margin: 20px 100px;
+    width: 100px;
+    height: 30px;
+    /* background-color: red; */
+    text-align: center;
+}
+
+.middle-container .context {
+    text-align: center;
+    /* background-color: red; */
+}
+
+.middle-container .email .context .email-1 {
+    color: #383838;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.middle-container .email .context .email-2 {
+    color: #383838;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.middle-container .email .context .email-3 {
+    color: #383838;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.middle-container .email .context .mail {
+    color: #383838;
+    font-size: 15px;
+    margin-top: 5px;
+}
+

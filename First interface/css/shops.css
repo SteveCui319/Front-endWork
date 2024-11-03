@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+   
+/* top bar */
+.top {
+    overflow: hidden;
+    background-color: #485664;
+    height: 50px;
+}
+
+/* links inside the .top */
+.top a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+   
+/* dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+   
+/* dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px 16px;
+    background-color: inherit;
+    font-family: inherit; /* important for the vertical align on mobile phones */
+    margin: 0;  /* important for the vertical align on mobile phones */
+    width: 160px;
+}
+   
+/* dropdown content (hidden in default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 500px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 1px;
+}
+   
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+   
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+   
+/* show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+/* Navigation bar */
+.navi {
+    height: 100px;
+    background-color: grey;
+}
+
+.navbar {
+    height: 90px;
+    overflow: hidden;
+    /* background-color: grey; */
+    border-bottom: 10px red;
+}
+
+/* left part of the navigation bar */
+.navbar .left .logo img{
+    float: left;
+    width: 240px;
+    height: 70px;
+    margin: 10px 50px 10px 10px;
+    /* background-color: pink; */
+    border-radius: 15px;
+}
+
+.navbar .search-container {
+    float: left;
+    /* background-color: pink; */
+}
+
+/* style the search box inside the navigation bar */
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 20px;
+    font-size: 17px;
+    border: none;
+    width: 300px;
+    height: 40px;
+    border-radius: 15px 0 0 15px;
+    background: #ddd;
+}
+
+.navbar .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 20px;
+    margin-right: 16px;
+    font-size: 17px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    border-radius: 0 150px 150px 0;
+}
+
+.navbar .search-container button:hover {
+    background: #ccc;
+}
+
+/* when the screen is less than 600px wide, stack the links and the search field vertically 
+instead of horizontally */
+@media screen and (max-width: 600px) {
+    .navbar .search-container {
+        float: none;
+    }
+    .navbar .left a, .navbar input[type=text], .navbar .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .navbar input[type=text] {
+        border: 1px solid #ccc;  
+    }     
+}
+
+/* right part of the navigation bar */
+.navbar .right a {
+    display: block;
+    float: right;
+    width: 120px;
+    height: 70px;
+    /* background-color: pink; */
+    margin: 5px 0 10px 5px;
+    text-decoration: none;
+}       
+
+.navbar .right li {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 27px;
+}
+
+/* path */
+.path-container {
+    width: 1200px;
+    height: 50px;
+    /* background-color: yellowgreen; */
+    margin: 0 auto;
+}
+
+.path-container > div {
+    float: left;
+    line-height: 50px;
+    margin-left: 10px;
+   
+}
+
+.path-container .root a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #262626;
+}
+
+.path-container .path-1 {
+    font-size: 12px;
+    color: #262626;
+    font-weight: 700;
+}
+
+/* title */
+.title {
+    /* height: 200px;
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    position: relative; */
+    width: 1202px;
+    height: 50px;
+    /* background-color: gray; */
+    margin: 0 auto;
+    font-size: 20px;
+    /* font-weight: 150px; */
+    line-height: 50px;
+}
+
+.title div {
+    width: 200px;
+    height: 100px;
+    /* background-color: red; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 40px;
+    color: #303840;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* shops */
+.shop-container {
+    width: 900px;
+    height: 800px;
+    /* background-color: gray; */
+    margin: 0 auto;
+}
+
+.shop-container ul li {
+    width: 300px;
+    height: 400px;
+    float: left;
+}
+
+.shop-container .shop1-box .image-box {
+    margin: 0 auto;
+    width: 270px;
+    height: 200px;
+    /* background-color: grey; */
+    margin-top: 20px;
+}
+
+.shop-container .shop1-box img {
+    width: 270px;
+    height: 200px;
+}
+
+.shop-container .shop1-box a {
+    text-decoration: none;
+}
+
+.shop-container .shop1-box .shop-name {
+    width: 270px;
+    height: 30px;
+    /* background-color: grey; */
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #383838;
+}
+
+.shop-container .shop1-box .shop-name:hover {
+    color: #00a8e8;
+}
+
+.shop-container .shop1-box .desc {
+    width: 270px;
+    height: 200px;
+    /* background-color: grey; */
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #383838;
+}
+
+.shop-container .shop1-box .desc:hover {
+    color: #00a8e8;
+}
+
+/* top part of the footer */
+.footer-topwrapper {
+    height: 50px;
+    background-color: #566880;
+    margin-top: 10px;
+    position: relative;
+}
+
+.footer-topwrapper .inner {
+    width: 1100px;
+    height: 24px;
+    /* background-color: skyblue; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto; /* center the inner box */
+    text-align: center;
+    line-height: 24px;
+}
+
+.footer-topwrapper .inner a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-topwrapper .inner a:hover {
+    color: #094055;
+}
+
+/* bottom part of the footer */
+.bottom-footer {
+    height: 500px;
+    background-color: #425261;
+}
+
+.bottom-footer .footer-container {
+    /* background-color: red; */
+    height: 500px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.bottom-footer li {
+    float: left;
+    /* background-color: pink; */
+    list-style: none;
+    height: 500px;
+    width: 250px;
+}
+
+/* first block of the first bottom box */
+.bottom-footer .footer-container .one div {
+    width: 250px;
+    height: 40px;
+    /* background-color: greenyellow; */
+    margin-top: 50px;
+}
+
+.bottom-footer .footer-container .one img{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.bottom-footer .footer-container .one p {
+    margin-top: 25px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #c8c8c8;
+}
+
+/* second block */
+.bottom-footer .footer-container .two .title {
+    margin-top: 50px;
+    width: 250px;
+    height: 40px;
+    /* background-color: yellowgreen; */
+    color: rgb(201, 142, 16);
+}
+
+.bottom-footer .footer-container .two a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.bottom-footer .footer-container .two .two-one {
+    margin-top: 25px;
+    
+}
+
+.bottom-footer .footer-container .two p {
+    margin-top: 10px;
+}
+
+/* thrid block */
+.bottom-footer .footer-container .three .title {
+    margin-top: 50px;
+    width: 250px;
+    height: 40px;
+    /* background-color: yellowgreen; */
+    color: rgb(201, 142, 16);
+}
+
+.bottom-footer .footer-container .three a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.bottom-footer .footer-container .three .three-one {
+    margin-top: 25px;
+    
+}
+
+.bottom-footer .footer-container .three p {
+    margin-top: 10px;
+}
+
+/* fourth block */
+.bottom-footer .footer-container .four .title {
+    margin-top: 50px;
+    width: 250px;
+    height: 40px;
+    /* background-color: yellowgreen; */
+    color: rgb(201, 142, 16);
+}
+
+.bottom-footer .footer-container .four div img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 15px;
+    border-radius: 50px;
+}

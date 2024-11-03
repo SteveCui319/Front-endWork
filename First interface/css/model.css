@@ -1,0 +1,856 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+   
+/* top bar */
+.top {
+    overflow: visible;
+    background-color: #485664;
+    height: 50px;
+}
+
+/* links inside the .top */
+.top a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+   
+/* dropdown container */
+.dropdown {
+    float: left;
+    overflow: visible;
+}
+   
+/* dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px 16px;
+    background-color: inherit;
+    font-family: inherit; /* important for the vertical align on mobile phones */
+    margin: 0;  /* important for the vertical align on mobile phones */
+    width: 160px;
+}
+   
+/* dropdown content (hidden in default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 500px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 1px;
+}
+   
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+   
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+   
+/* show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+/* Navigation bar */
+.navi {
+    height: 100px;
+    background-color: grey;
+}
+
+.navbar {
+    height: 90px;
+    overflow: hidden;
+    /* background-color: grey; */
+    border-bottom: 10px red;
+}
+
+/* left part of the navigation bar */
+.navbar .left .logo img{
+    float: left;
+    width: 240px;
+    height: 70px;
+    margin: 10px 50px 10px 10px;
+    /* background-color: pink; */
+    border-radius: 15px;
+}
+
+.navbar .search-container {
+    float: left;
+    /* background-color: pink; */
+}
+
+/* style the search box inside the navigation bar */
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 20px;
+    font-size: 17px;
+    border: none;
+    width: 300px;
+    height: 40px;
+    border-radius: 15px 0 0 15px;
+    background: #ddd;
+}
+
+.navbar .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 20px;
+    margin-right: 16px;
+    font-size: 17px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    border-radius: 0 150px 150px 0;
+}
+
+.navbar .search-container button:hover {
+    background: #ccc;
+}
+
+/* when the screen is less than 600px wide, stack the links and the search field vertically 
+instead of horizontally */
+@media screen and (max-width: 600px) {
+    .navbar .search-container {
+        float: none;
+    }
+    .navbar .left a, .navbar input[type=text], .navbar .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .navbar input[type=text] {
+        border: 1px solid #ccc;  
+    }     
+}
+
+/* right part of the navigation bar */
+.navbar .right a {
+    display: block;
+    float: right;
+    width: 120px;
+    height: 70px;
+    /* background-color: pink; */
+    margin: 5px 0 10px 5px;
+    text-decoration: none;
+}       
+
+.navbar .right li {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 27px;
+}
+
+/* banner */
+.banner {
+    width: 1350px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    white-space: nowrap;
+    background-color: gray;
+    margin: 0 auto;
+}
+
+.banner > div{
+    position: absolute;
+    animation: move_slide2 16s infinite;
+    opacity:0;
+    /* background-color: pink; */
+}
+
+.banner img {
+    width: 1350px;
+    height: 600px;
+}
+
+  .banner > div:nth-child(1){ animation-delay: 0; }
+  .banner > div:nth-child(2){ animation-delay: 5s; }
+  .banner > div:nth-child(3){ animation-delay: 10s; }
+  .banner > div:nth-child(4){ animation-delay: 15s; }
+  .banner > div:nth-child(5){ animation-delay: 20s; }
+
+
+  @keyframes move_slide{
+    10%{ opacity:1; }
+    80%{ opacity:1; }
+    90%{ opacity:0 }  
+  }
+
+  @keyframes move_slide2{
+    25%{opacity:1;}
+    40%{opacity:0;}
+  }
+
+/* box of shops */
+.title {
+    width: 1202px;
+    height: 50px;
+    /* background-color: gray; */
+    margin: 0 auto;
+    font-size: 20px;
+    /* font-weight: 150px; */
+    line-height: 50px;
+    margin-top: 50px;
+}
+
+.shops {
+    width: 1202px;
+    height: 100px;
+    /* background-color: pink; */
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+.shops li {
+    width: 150px;
+    height: 100px;
+    /* background-color: grey; */
+    float: left; /* 这里会空行？ */
+}
+.shops .shopLogo div {
+    width: 130px;
+    height: 90px;
+    /* background-color: yellowgreen; */
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shops .shopLogo img {
+  width: 130px;
+  height: 90px;
+}
+
+/* special events */
+.events {
+    width: 1202px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    /* background-color: yellowgreen; */
+}
+
+.events div {
+    float: left;
+}
+
+.events div i {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.events .title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-left: 10px;
+}
+
+.eventbox {
+    height: 500px;
+    background-color: gray;
+}
+
+.eventbox .centerbox {
+    width: 1350px;
+    height: 500px;
+    background-color: pink;
+    margin: 0 auto;
+}
+
+/* left part of the events box */
+.eventbox .centerbox .left {
+    width: 520px;
+    height: 500px;
+    background-color: #303840;
+    float: left;
+}
+
+.eventbox .centerbox .left div {
+    width: 400px;
+    height: 100px;
+    /* background-color: pink; */
+    font-size: 28px;
+    color: #fff;
+    line-height: 100px;
+    text-align: center;
+    margin: 150px 60px 0 60px;
+}
+
+.eventbox .centerbox .left button {
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    background-color: #fff;
+    color: #303840;
+    margin: 40px 185px 0 185px;
+    border-radius: 30px;
+}
+
+.eventbox .centerbox .left button:hover {
+    background-color: rgb(83, 187, 229);
+}
+
+/* right part of the events box */
+.eventbox .centerbox .right {
+    width: 830px;
+    height: 500px;
+    background-color: #303840;
+    float: left;
+}
+
+.eventbox .centerbox .right img {
+    width: 830px;
+    height: 500px;
+}
+
+/* collection list */
+/* .toysTitle {
+    width: 1202px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: yellowgreen;
+}
+
+.toyslist {
+    width: 1202px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: gray;
+} */
+
+/* new arrivals style */
+.arrivals {
+    width: 1202px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 60px;
+    /* background-color: yellowgreen; */
+}
+
+.arrivals div {
+    float: left;
+}
+
+.arrivals div i {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.arrivals .title {
+  font-size: 20px;
+  line-height: 50px;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.newlist {
+  width: 1201px;
+  height: 701px;
+  margin: 0 auto;
+  background-color: gray;
+}
+
+.newlist li {
+    width: 239px;
+    height: 349px;
+    /* background-color: #fcfcfc; */
+    background-color: #303840;
+    float: left;
+    margin-right: 1px;
+}
+
+/* arrival 1 */
+.newlist .first-row-1 {
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
+.newlist .first-row-1 div {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px 8px 0 9px;
+    overflow: visible;
+}
+
+.newlist .first-row-1 div img {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: all 0.5s; /* all attributes transition completed in 0.5s */
+}
+
+.newlist .first-row-1 div img:hover {
+    transform: scale(1.1); /* enlarge in size 1.1 when mouse move on the picture */
+}
+
+.newlist .first-row-1 .desc {
+    /* background-color: gray; */
+    width: 220px;
+    height: 100px;
+    font-size: 16px;
+    color: #00a8e8;
+}
+
+/* arrival 2 */
+.newlist .first-row-2 {
+    margin-top: 1px;
+}
+
+.newlist .first-row-2 div {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px 8px 0 9px;
+    overflow: visible;
+}
+
+.newlist .first-row-2 div img {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.newlist .first-row-2 div img:hover {
+    transform: scale(1.1);
+}
+
+.newlist .first-row-2 .desc {
+    /* background-color: gray; */
+    width: 220px;
+    height: 100px;
+    font-size: 16px;
+    color: #00a8e8;
+}
+
+/* arrival 3 */
+.newlist .first-row-3 {
+    margin-top: 1px;
+}
+
+.newlist .first-row-3 div {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px 8px 0 9px;
+    overflow: visible;
+}
+
+.newlist .first-row-3 div img {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.newlist .first-row-3 div img:hover {
+    transform: scale(1.1);
+}
+
+.newlist .first-row-3 .desc {
+    /* background-color: gray; */
+    width: 220px;
+    height: 100px;
+    font-size: 16px;
+    color: #00a8e8;
+}
+
+/* arrival 4 */
+.newlist .first-row-4 {
+    margin-top: 1px;
+}
+
+.newlist .first-row-4 div {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px 8px 0 9px;
+    overflow: visible;
+}
+
+.newlist .first-row-4 div img {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.newlist .first-row-4 div img:hover {
+    transform: scale(1.1);
+}
+
+.newlist .first-row-4 .desc {
+    /* background-color: gray; */
+    width: 220px;
+    height: 100px;
+    font-size: 16px;
+    color: #00a8e8;
+}
+
+/* arrival 5 */
+.newlist .first-row-5 {
+    margin-top: 1px;
+}
+
+.newlist .first-row-5 div {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px 8px 0 9px;
+    overflow: visible;
+}
+
+.newlist .first-row-5 div img {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.newlist .first-row-5 div img:hover {
+    transform: scale(1.1);
+}
+
+.newlist .first-row-5 .desc {
+    /* background-color: gray; */
+    width: 220px;
+    height: 100px;
+    font-size: 16px;
+    color: #00a8e8;
+}
+
+/* arrival 6 */
+.newlist .sec-row-1 {
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
+.newlist .sec-row-1 div {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px 8px 0 9px;
+    overflow: visible;
+}
+
+.newlist .sec-row-1 div img {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.newlist .sec-row-1 div img:hover {
+    transform: scale(1.1);
+}
+
+.newlist .sec-row-1 .desc {
+    /* background-color: gray; */
+    width: 220px;
+    height: 100px;
+    font-size: 16px;
+    color: #00a8e8;
+}
+
+/* arrival 7 */
+.newlist .sec-row-2 {
+    margin-top: 1px;
+}
+
+.newlist .sec-row-2 div {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px 8px 0 9px;
+    overflow: visible;
+}
+
+.newlist .sec-row-2 div img {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.newlist .sec-row-2 div img:hover {
+    transform: scale(1.1);
+}
+
+.newlist .sec-row-2 .desc {
+    /* background-color: gray; */
+    width: 220px;
+    height: 100px;
+    font-size: 16px;
+    color: #00a8e8;
+}
+
+/* arrival 8 */
+.newlist .sec-row-3 {
+    margin-top: 1px;
+}
+
+.newlist .sec-row-3 div {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px 8px 0 9px;
+    overflow: visible;
+}
+
+.newlist .sec-row-3 div img {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.newlist .sec-row-3 div img:hover {
+    transform: scale(1.1);
+}
+
+.newlist .sec-row-3 .desc {
+    /* background-color: gray; */
+    width: 220px;
+    height: 100px;
+    font-size: 16px;
+    color: #00a8e8;
+}
+
+/* arrival 9 */
+.newlist .sec-row-4 {
+    margin-top: 1px;
+}
+
+.newlist .sec-row-4 div {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px 8px 0 9px;
+    overflow: visible;
+}
+
+.newlist .sec-row-4 div img {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.newlist .sec-row-4 div img:hover {
+    transform: scale(1.1);
+}
+
+.newlist .sec-row-4 .desc {
+    /* background-color: gray; */
+    width: 220px;
+    height: 100px;
+    font-size: 16px;
+    color: #00a8e8;
+}
+
+/* arrival 10 */
+.newlist .sec-row-5 {
+    margin-top: 1px;
+}
+
+.newlist .sec-row-5 div {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px 8px 0 9px;
+    overflow: visible;
+}
+
+.newlist .sec-row-5 div img {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.newlist .sec-row-5 div img:hover {
+    transform: scale(1.1);
+}
+
+.newlist .sec-row-5 .desc {
+    /* background-color: gray; */
+    width: 220px;
+    height: 100px;
+    font-size: 16px;
+    color: #00a8e8;
+}
+
+/* top part of the footer */
+.footer-topwrapper {
+    height: 50px;
+    background-color: #566880;
+    margin-top: 50px;
+    position: relative;
+}
+
+.footer-topwrapper .inner {
+    width: 1100px;
+    height: 24px;
+    /* background-color: skyblue; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto; /* center the inner box */
+    text-align: center;
+    line-height: 24px;
+}
+
+.footer-topwrapper .inner a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-topwrapper .inner a:hover {
+    color: #094055;
+}
+
+/* bottom part of the footer */
+.bottom-footer {
+    height: 500px;
+    background-color: #425261;
+}
+
+.bottom-footer .footer-container {
+    /* background-color: red; */
+    height: 500px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.bottom-footer li {
+    float: left;
+    /* background-color: pink; */
+    list-style: none;
+    height: 500px;
+    width: 250px;
+}
+
+/* first block of the first bottom box */
+.bottom-footer .footer-container .one div {
+    width: 250px;
+    height: 40px;
+    /* background-color: greenyellow; */
+    margin-top: 50px;
+}
+
+.bottom-footer .footer-container .one img{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.bottom-footer .footer-container .one p {
+    margin-top: 25px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #c8c8c8;
+}
+
+/* second block */
+.bottom-footer .footer-container .two .title {
+    margin-top: 50px;
+    width: 250px;
+    height: 40px;
+    /* background-color: yellowgreen; */
+    color: rgb(201, 142, 16);
+}
+
+.bottom-footer .footer-container .two a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.bottom-footer .footer-container .two .two-one {
+    margin-top: 25px;
+    
+}
+
+.bottom-footer .footer-container .two p {
+    margin-top: 10px;
+}
+
+/* thrid block */
+.bottom-footer .footer-container .three .title {
+    margin-top: 50px;
+    width: 250px;
+    height: 40px;
+    /* background-color: yellowgreen; */
+    color: rgb(201, 142, 16);
+}
+
+.bottom-footer .footer-container .three a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.bottom-footer .footer-container .three .three-one {
+    margin-top: 25px;
+    
+}
+
+.bottom-footer .footer-container .three p {
+    margin-top: 10px;
+}
+
+/* fourth block */
+.bottom-footer .footer-container .four .title {
+    margin-top: 50px;
+    width: 250px;
+    height: 40px;
+    /* background-color: yellowgreen; */
+    color: rgb(201, 142, 16);
+}
+
+.bottom-footer .footer-container .four div img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 15px;
+    border-radius: 50px;
+}
